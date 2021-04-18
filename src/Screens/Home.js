@@ -32,9 +32,10 @@ export default class Home extends Component {
                 <Header />
 
                 {(this.state.page !== "Home")? <Page page={this.state.page} /> :
-                    <div>
+                    <div className="outter-container">
+                        <div className="content">
                         {/* Top Box */}
-                        <div className="outter-container">
+                        <div className="box-container">
                             <div className="AFYA">
                                 <div className="border-radius">
                                     <h6 className="name1">AFYA</h6>
@@ -105,6 +106,7 @@ export default class Home extends Component {
                         <div className="last-bar"></div>
 
                         <br />
+                        </div>
                     </div>}
                 <Footer pagename={this.state.page} pagination={this.pagination} />
             </div>

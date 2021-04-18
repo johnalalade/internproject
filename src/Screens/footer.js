@@ -16,34 +16,34 @@ function Footer(props) {
   return (
     <div className="tab">
 
-      <p onClick={() => props.pagination("Home")} className={`${home} navlink`}>
+      <button onClick={() => props.pagination("Home")} className={`${home} navlink`}>
         <FontAwesomeIcon icon={faHome} size="lg" />
        Home
-       </p>
+       </button>
 
 
 
-      <p className={`${activity} navlink`} onClick={() => props.pagination("Activity")} >
+      <button className={`${activity} navlink`} onClick={() => props.pagination("Activity")} >
         <FontAwesomeIcon icon={faListAlt} size="lg"></FontAwesomeIcon>
         Activity
-      </p>
+      </button>
 
-      <p className={`${wallet} navlink`} onClick={() => props.pagination("Wallet")} >
+      <button className={`${wallet} navlink`} onClick={() => props.pagination("Wallet")} >
         <FontAwesomeIcon icon={faWallet} size="lg"></FontAwesomeIcon>
         Wallet
-      </p>
+      </button>
 
 
-      <p className={`${market} navlink`} onClick={() => props.pagination("Market")} >
+      <button className={`${market} navlink`} onClick={() => props.pagination("Market")} >
         <FontAwesomeIcon icon={faStoreAlt} size="lg"></FontAwesomeIcon>
         Market
-      </p>
+      </button>
 
 
-      <p className={`${earn} navlink`} onClick={() => props.pagination("Earn")} >
+      <button className={`${earn} navlink`} onClick={() => props.pagination("Earn")} >
         <FontAwesomeIcon icon={faGift} size="lg"></FontAwesomeIcon>
         Earn
-      </p>
+      </button>
 
     </div>
   );
