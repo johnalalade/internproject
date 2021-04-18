@@ -95,6 +95,13 @@
   .content{
     width: 50vw;
   }
+  .header{
+    width: inherit;
+  }
+  .tab{
+    width: inherit;
+    font-size: smaller;
+  }
 }
 /* Top box */
 .box-container{
