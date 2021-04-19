@@ -28,12 +28,13 @@ export default class Home extends Component {
 
     render() {
         return (
-            <div className="outter-container">
-                <div className="content">
+            <div>
+                
                     <Header />
 
                     {(this.state.page !== "Home") ? <Page page={this.state.page} /> :
-                        <div>
+                        <div className="outter-container">
+                            <div className="container">
                             {/* Top Box */}
                             <div className="box-container">
                                 <div className="AFYA">
@@ -106,11 +107,11 @@ export default class Home extends Component {
                             <div className="last-bar"></div>
 
                             <br />
-
+                            </div>
                         </div>}
                     <Footer pagename={this.state.page} pagination={this.pagination} />
                 </div>
-            </div>
+            
         )
     }
 }
