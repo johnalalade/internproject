@@ -96,7 +96,11 @@
   .brand{
     padding-left: +30px;
   }
+  .contain{
+    width: 50vw;
+  }
 }
+
 /* Top box */
 .box-container{
   background-color: rgb(216, 27, 96);

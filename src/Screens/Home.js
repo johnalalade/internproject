@@ -34,7 +34,7 @@ export default class Home extends Component {
 
                     {(this.state.page !== "Home") ? <Page page={this.state.page} /> :
                         <div className="outter-container">
-                            <div className="container">
+                            <div className="contain">
                             {/* Top Box */}
                             <div className="box-container">
                                 <div className="AFYA">
