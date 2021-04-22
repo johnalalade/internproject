@@ -15,8 +15,7 @@ function Header() {
     <nav className="header">
 
        <div className="brand">
-        <img className="logo" className="header-img" src={Logo} alt="logo"/>
-        <p className="ribbon">ribbon</p>
+        <p className="logo">LOGO</p>
        </div>
 
 

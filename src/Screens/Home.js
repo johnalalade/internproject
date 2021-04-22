@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 import Footer from './footer';
 import Header from './header';
-import Aids from '../Images/aids.png';
-import Bp from '../Images/blood pressure.png';
-import lungs from '../Images/lungs.jpg';
 import Page from './Pages';
 
 
@@ -29,31 +26,17 @@ export default class Home extends Component {
     render() {
         return (
             <div>
-                
-                    <Header />
 
-                    {(this.state.page !== "Home") ? <Page page={this.state.page} /> :
-                        <div className="outter-container">
-                            <div className="contain">
+                <Header />
+
+                {(this.state.page !== "Home") ? <Page page={this.state.page} /> :
+                    <div className="outter-container">
+                        <div className="contain">
                             {/* Top Box */}
                             <div className="box-container">
-                                <div className="AFYA">
-                                    <div className="border-radius">
-                                        <h6 className="name1">AFYA</h6>
-                                    </div>
-                                    <p className="number">143.00</p>
-                                    <p className="text">Balance</p>
-                                </div>
-
-                                <div className="line"></div>
-
-                                <div className="ZAR">
-                                    <div className="border-radius">
-                                        <h6 className="name2">ZAR</h6>
-                                    </div>
-                                    <p className="number">R21.00</p>
-                                    <p className="text">Equivalent</p>
-                                </div>
+                                <h5 className="text" >WALLET BALANCE</h5>
+                                <h5 className="text" >TOKEN BALANCE:</h5>
+                                <h5 className="text" >NAIRA BALANCE:</h5>
                             </div>
 
                             {/* Currency */}
@@ -63,14 +46,7 @@ export default class Home extends Component {
                             </div>
 
                             <div className="select currency">
-
-                                <select value={this.state.currency} name="currency" onChange={this.currency} className="select-box">
-                                    {this.state.currencies.map((cur) =>
-                                        <option key={cur} value={cur}>{cur}</option>
-                                    )}
-
-                                </select>
-
+                                <p className="token">TOKEN</p>
                                 <p className="digits">0.00000001</p>
                             </div>
 
@@ -87,19 +63,24 @@ export default class Home extends Component {
                             {/* lists */}
                             <div className="lists">
                                 <div className="list">
-                                    <img src={Aids} className="list-img" alt="HIV" />
-                                    <p className="list-text">HIV Blood Draw Test</p>
-                                    <p className="list-price">A100</p>
+                                    <p className="list-text">Date</p>
+                                    <p className="list-text">Description</p>
+                                    <p className="list-text">Amount</p>
                                 </div>
                                 <div className="list">
-                                    <img src={lungs} className="list-img" alt="HIV" />
-                                    <p className="list-text">TB Radiology XRay</p>
-                                    <p className="list-price">A30</p>
+                                    <p className="list-text">1/1/21</p>
+                                    <p className="list-text">Sent</p>
+                                    <p className="list-text">N100.0</p>
                                 </div>
                                 <div className="list">
-                                    <img src={Bp} className="list-img" alt="HIV" />
-                                    <p className="list-text">Blood Pressure Check</p>
-                                    <p className="list-price">A10</p>
+                                    <p className="list-text">2/2/21</p>
+                                    <p className="list-text">Received</p>
+                                    <p className="list-text">N200.0</p>
+                                </div>
+                                <div className="list">
+                                    <p className="list-text">3/3/21</p>
+                                    <p className="list-text">Sent</p>
+                                    <p className="list-text">N300.0</p>
                                 </div>
                             </div>
 
@@ -107,11 +88,11 @@ export default class Home extends Component {
                             <div className="last-bar"></div>
 
                             <br />
-                            </div>
-                        </div>}
-                    <Footer pagename={this.state.page} pagination={this.pagination} />
-                </div>
-            
+                        </div>
+                    </div>}
+                <Footer pagename={this.state.page} pagination={this.pagination} />
+            </div>
+
         )
     }
 }
